@@ -2,7 +2,6 @@ package com.example.demo.controllers;
 
 import com.example.demo.DTO.GameDTO;
 import com.example.demo.DTO.GameMinDTO;
-import com.example.demo.entities.Game;
 import com.example.demo.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

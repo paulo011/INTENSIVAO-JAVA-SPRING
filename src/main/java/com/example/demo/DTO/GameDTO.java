@@ -1,7 +1,6 @@
 package com.example.demo.DTO;
 
 import com.example.demo.entities.Game;
-import jakarta.persistence.Column;
 import org.springframework.beans.BeanUtils;
 
 public class GameDTO {

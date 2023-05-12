@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.DTO.GameDTO;
+import com.example.demo.DTO.GameListDTO;
 import com.example.demo.DTO.GameMinDTO;
 import com.example.demo.entities.Game;
 import com.example.demo.repository.GameRepository;
@@ -23,5 +24,9 @@ public class GameService {
     @Transactional(readOnly = true)
     public List<GameMinDTO> findAll(){
         return gameRepository.findAll().stream().map(game -> new GameMinDTO(game)).toList();
+    }
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> findByList(Long listId){
+        return gameRepository.searchByList(listId).stream().map(gameMinProjection -> new GameMinDTO(gameMinProjection)).toList();
     }
 }
