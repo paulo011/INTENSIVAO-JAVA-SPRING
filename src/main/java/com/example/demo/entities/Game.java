@@ -112,7 +112,7 @@ public class Game {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return id.equals(game.id);
+        return Objects.equals(id, game.id);
     }
 
     @Override
